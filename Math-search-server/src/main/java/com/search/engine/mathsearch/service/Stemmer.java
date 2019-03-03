@@ -1,3 +1,5 @@
+package com.search.engine.mathsearch.service;
+
 /**
  * Stemmer, implementing the Porter Stemming Algorithm
  *
