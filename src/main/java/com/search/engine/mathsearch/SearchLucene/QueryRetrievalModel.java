@@ -11,6 +11,7 @@ import org.apache.lucene.store.FSDirectory;
 import com.search.engine.mathsearch.Classes.*;
 import com.search.engine.mathsearch.IndexingLucene.*;
 
+import javax.persistence.Entity;
 import java.io.File;
 import java.io.FileInputStream;
 import java.nio.file.Paths;
@@ -37,20 +38,15 @@ public class QueryRetrievalModel {
 		}
 	}
 
-	public List<String> retrieveQuery(MyQuery aQuery, int TopN) throws Exception {
+	public List<Article> retrieveQuery(MyQuery aQuery, int TopN) throws Exception {
 		List<Document> results = new ArrayList<Document>();
 		Query theQ = new QueryParser("CONTENT", new WhitespaceAnalyzer()).parse(aQuery.GetQueryContent());
 		ScoreDoc[] scoreDoc = indexSearcher.search(theQ, TopN).scoreDocs;
 		for (ScoreDoc score : scoreDoc) {
 			results.add(new Document(score.doc + "", ireader.document(score.doc).get("DOCNO"), score.score));
 		}
-//		results.sort(new Comparator<Document>() {
-//			@Override
-//			public int compare(Document o1, Document o2) {
-//				return -Double.compare(o1.score(),o2.score());
-//			}
-//		});
-		List<String> re = new ArrayList<>();
+
+		List<Article> re = new ArrayList<>();
 
 		for (Document d:results){
 			FileInputStream f=new FileInputStream(d.docno());
@@ -65,12 +61,13 @@ public class QueryRetrievalModel {
 			for (int i = 0; i < 100 && wt.nextWord()!=null; i++) {
 				sb.append(String.valueOf(wt.nextWord())+" ");
 			}
-//			String [] s=new String[2];
-//			s[0]=d.docno().substring(28);
-//			s[1]=;
-			re.add(d.docno().substring(28)+"|"+sb.toString().trim());
+
+			re.add(new Article(sb.toString().trim(),
+					d.docno().substring(28).split("/")[1].replaceAll(".html", ""),
+					"http://35.245.156.13:8082/"+d.docno().substring(28)));
 		}
 		return re;
 	}
 
 }
+
