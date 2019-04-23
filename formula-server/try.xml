@@ -1,0 +1,21 @@
+<mfrac>
+    <msqrt>
+        <mrow>
+            <msup>
+                <mi>b</mi>
+                <mn>2</mn>
+            </msup>
+            <mo>-</mo>
+            <mrow>
+                <mn>4</mn>
+                <mi>a</mi>
+                <mi>c</mi>
+            </mrow>
+        </mrow>
+    </msqrt>
+    <mrow>
+        <mn>2</mn>
+        <mo>⁢</mo>
+        <mi>a</mi>
+    </mrow>
+</mfrac>
