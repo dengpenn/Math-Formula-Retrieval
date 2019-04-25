@@ -64,7 +64,8 @@ public class QueryRetrievalModel {
 
 			re.add(new Article(sb.toString().trim(),
 					d.docno().substring(28).split("/")[1].replaceAll(".html", ""),
-					"http://35.245.156.13:8082/"+d.docno().substring(28)));
+//					"http://35.245.156.13:8082/"+d.docno().substring(28)));
+					"http://35.238.247.88:8080/get/document/"+d.docno().substring(28).replaceFirst("/",":")));
 		}
 		return re;
 	}
