@@ -1,0 +1,103 @@
+.search-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  height: 38px;
+}
+
+.search-formula {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.search-bar {
+  background-color: #3B945E;
+  box-shadow: 1px 1px 4px #3B945E;
+  min-height: 82.25px;
+}
+
+.search-button {
+  width: 100px;
+  border-radius: 20px;
+  height: 38px;
+}
+
+.search-text-input {
+  border-radius: 20px;
+}
+
+.search-formula-input {
+  border-radius: 20px;
+}
+
+.search-bar-text {
+  height: 100%;
+  line-height: 100%;
+}
+
+.text-form {
+  margin-top: 21.625px;
+}
+
+.input-type {
+  border-radius: 20px;
+  background-color: #3B945E;
+  color: white;
+}
+
+.active {
+  background-color: transparent;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #3B945E;
+  border-bottom: 2px solid white;
+}
+
+.input-type {
+  text-align: center;
+  margin-left: 50px;
+  height: 35px;
+}
+
+.search-button-formula{
+  margin-top:11.5px;
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+  min-height: 61.25px;
+  height:auto;
+}
+
+.search-content{
+  margin-top: 20px;
+}
+
+.search-content-card{
+  margin-bottom: 20px;
+}
+
+.search-contents {
+  padding-top:20px;
+}
+
+.search-content {
+  margin-bottom: 10px;
+}
+
+.hyperlink {
+  color: #006621;
+}
+.card-header a{
+  color: black;
+}
+.checkFuzzy{
+  color:white;
+  margin-left:40px;
+  margin-top: 19px;
+}

@@ -1,0 +1,81 @@
+<div class="container-fluid">
+  <div class="row search-bar">
+    <div class="col-2">
+      <img src="assets/logo.png" height="40px" style="margin-top:20px;margin-left: 30px;">
+    </div>
+    <div class="col-1">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active input-type" id="v-pills-text-tab" data-toggle="pill" href="#v-pills-text" role="tab"
+          aria-controls="v-pills-text" aria-selected="true">Text</a>
+        <a class="nav-link input-type" id="v-pills-formula-tab" data-toggle="pill" href="#v-pills-formula" role="tab"
+          aria-controls="v-pills-formula" aria-selected="false">Formula</a>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-text" role="tabpanel" aria-labelledby="v-pills-text-tab">
+
+          <form class="text-form" #TextForm="ngForm" (ngSubmit)="onSubmit_searchText(TextForm)">
+            <div class="form-group row search-text">
+              <div class="col-5">
+                <input name="key_text" type="text" class="form-control search-text-input" #keyText="ngModel"
+                  [(ngModel)]="query.key_text">
+              </div>
+              <input type="submit" value="Search" class="btn btn-outline-light search-button">
+            </div>
+          </form>
+
+        </div>
+        <div class="tab-pane fade" id="v-pills-formula" role="tabpanel" aria-labelledby="v-pills-formula-tab">
+
+          <form #FormulaForm="ngForm" (ngSubmit)="onSubmit_searchFormula(FormulaForm)">
+            <div class="form-group row search-formula">
+              <div class="col-5">
+
+                <textarea name="key_formula" (keyup)="auto_grow()" type="text" class="form-control search-formula-input"
+                  id="textarea" #keyFormula="ngModel" [(ngModel)]="query.key_formula" cols="80"></textarea>
+
+              </div>
+              <div class="col-1">
+                <input type="submit" value="Search" class="btn btn-outline-light search-button search-button-formula">
+              </div>
+              <div class="col-1">
+                <label class="form-check-label checkFuzzy" for="checkFuzzy">
+                  <input class="form-check-input " name="isFuzzy" [(ngModel)]="query.isFuzzy" type="checkbox"
+                    id="checkFuzzy">
+                  Fuzzy
+                </label>
+              </div>
+              <div class="col-4">
+                <app-mathjax #mathjaxChild [content]='query.key_formula'></app-mathjax>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row search-contents">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="search-content">
+        <div class="search-content-card card" *ngFor="let article of articles">
+          <h5 class="card-header">
+            <a href="{{article.url}}" target="_blank">
+              {{article.title}}
+            </a>
+          </h5>
+          <div class="content card-body">
+            <h6 class="card-title"><a href="{{article.url}}" target="_blank"><cite class="hyperlink">
+                  {{article.url}}
+                </cite></a></h6>
+            <p class="card-text">
+              {{article.keyword}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
