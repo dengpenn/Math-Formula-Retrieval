@@ -26,7 +26,7 @@ This repo contains front-end and backend of math formula retrieval system includ
 
 [Yuchen Deng](<https://github.com/lethelimited>)
 
-[Sichao Xue](<https://github.com/xuesichao)
+[Sichao Xue](<https://github.com/xuesichao>)
 
 ## Demo
 
