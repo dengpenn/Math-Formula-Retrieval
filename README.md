@@ -20,14 +20,6 @@ This repo contains front-end and backend of math formula retrieval system includ
 * We treat every formula inside documents as single indexed file. 
 * The ranking algorithms is <a href="https://www.codecogs.com/eqnedit.php?latex=score(Q,F)&space;=\sum\limits_{s\in{F}}\sum\limits_{t\in{Q}}tf(f,F)\times&space;iff(t)\times&space;W_{level}(t,s)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?score(Q,F)&space;=\sum\limits_{s\in{F}}\sum\limits_{t\in{Q}}tf(f,F)\times&space;iff(t)\times&space;W_{level}(t,s)" title="score(Q,F) =\sum\limits_{s\in{F}}\sum\limits_{t\in{Q}}tf(f,F)\times iff(t)\times W_{level}(t,s)" /></a>. <a href="https://www.codecogs.com/eqnedit.php?latex=W_{level}(t,s)&space;=&space;\frac{1}{1&plus;level(t)&plus;level(s)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?W_{level}(t,s)&space;=&space;\frac{1}{1&plus;level(t)&plus;level(s)}" title="W_{level}(t,s) = \frac{1}{1+level(t)+level(s)}" /></a>. It indicated the matched level between the indexed formula and searched  formula.
 
-## Contributor
-
-[Deng Pan](<https://github.com/dengpenn>)
-
-[Yuchen Deng](<https://github.com/lethelimited>)
-
-[Sichao Xue](<https://github.com/xuesichao>)
-
 ## Demo
 
 ### Searched Formula
@@ -52,11 +44,13 @@ This repo contains front-end and backend of math formula retrieval system includ
 
 ![image-20190427214644396](./img/match_result3.png)
 
+## Contributor
 
+[Deng Pan](<https://github.com/dengpenn>)
 
+[Yuchen Deng](<https://github.com/lethelimited>)
 
-
-
+[Sichao Xue](<https://github.com/xuesichao>)
 
 ## Reference 
 
