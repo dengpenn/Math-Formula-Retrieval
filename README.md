@@ -12,13 +12,13 @@ This repo contains front-end and backend of math formula retrieval system includ
 
 * Mathematical formulae are important means for dissemination and communication of scientific information.
 * Non-alphabetical symbols that are not understood by current search systems.
-* Terms are either meaningless or improperly read and processed by current systems; e.g. $$(sin(x + log x) == sin x + log x)$$
+* Terms are either meaningless or improperly read and processed by current systems; e.g. <a href="https://www.codecogs.com/eqnedit.php?latex=(sin(x&space;&plus;&space;log&space;x)&space;==&space;sin&space;x&space;&plus;&space;log&space;x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(sin(x&space;&plus;&space;log&space;x)&space;==&space;sin&space;x&space;&plus;&space;log&space;x)" title="(sin(x + log x) == sin x + log x)" /></a>
 * Current search systems are not equipped to recognize those structure when searching.
 
 ## Method
 
 * We treat every formula inside documents as single indexed file. 
-* The ranking algorithms is $$score(Q,F) =\sum\limits_{s\in{F}}\sum\limits_{t\in{Q}}tf(f,F)\times iff(t)\times W_{level}(t,s)$$.$$W_{level}(t,s) = \frac{1}{1+level(t)+level(s)}$$. It indicated the matched level between the indexed formula and searched  formula.
+* The ranking algorithms is <a href="https://www.codecogs.com/eqnedit.php?latex=score(Q,F)&space;=\sum\limits_{s\in{F}}\sum\limits_{t\in{Q}}tf(f,F)\times&space;iff(t)\times&space;W_{level}(t,s)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?score(Q,F)&space;=\sum\limits_{s\in{F}}\sum\limits_{t\in{Q}}tf(f,F)\times&space;iff(t)\times&space;W_{level}(t,s)" title="score(Q,F) =\sum\limits_{s\in{F}}\sum\limits_{t\in{Q}}tf(f,F)\times iff(t)\times W_{level}(t,s)" /></a>. <a href="https://www.codecogs.com/eqnedit.php?latex=W_{level}(t,s)&space;=&space;\frac{1}{1&plus;level(t)&plus;level(s)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?W_{level}(t,s)&space;=&space;\frac{1}{1&plus;level(t)&plus;level(s)}" title="W_{level}(t,s) = \frac{1}{1+level(t)+level(s)}" /></a>. It indicated the matched level between the indexed formula and searched  formula.
 
 ## Contributor
 
@@ -50,9 +50,7 @@ This repo contains front-end and backend of math formula retrieval system includ
 
 #### Rank3
 
-![image-20190427214644396](/Users/dengpan/Desktop/Information_Retrival/Math-Formula-Retrieval/Math-Formula-Retrieval/img/match_result3.png)
-
-### Searched Text
+![image-20190427214644396](./img/match_result3.png)
 
 
 
